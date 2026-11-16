@@ -5,7 +5,7 @@ export default function Header() {
         <div className="logo-row">
           <img src="/covers/logo.jpg" alt="TAPE" className="logo" />
           <div className="search-bar">
-            <input type="text" placeholder="Search mixtapes..." />
+            <input type="text" placeholder="Search tapes..." />
           </div>
         </div>
         <nav className="nav">
