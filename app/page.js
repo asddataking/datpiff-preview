@@ -1,18 +1,9 @@
 import Header from '../components/Header';
 import MixtapeGrid from '../components/MixtapeGrid';
+import { tapes } from '../lib/data';
 
-const featured = [
-  { title: 'Night Shift', artist: 'Young Maverick', listens: '128K', cover: '/covers/night-shift.jpg' },
-  { title: 'Gold Rush', artist: 'King', listens: '94K', cover: '/covers/gold-rush.jpg' },
-  { title: 'Spotlight', artist: 'She', listens: '76K', cover: '/covers/spotlight.jpg' },
-];
-
-const hottest = [
-  { title: 'Block Party', artist: 'Real From The Block', rating: 5, listens: '52K', cover: '/covers/block-party.jpg', badge: 'hot' },
-  { title: 'Night Shift', artist: 'Young Maverick', rating: 4, listens: '128K', cover: '/covers/night-shift.jpg' },
-  { title: 'Gold Rush', artist: 'King', rating: 5, listens: '94K', cover: '/covers/gold-rush.jpg', badge: 'new' },
-  { title: 'Spotlight', artist: 'She', rating: 4, listens: '76K', cover: '/covers/spotlight.jpg' },
-];
+const featured = tapes.slice(0, 3);
+const hottest = tapes;
 
 export default function Home() {
   return (
@@ -24,13 +15,13 @@ export default function Home() {
         </h2>
         <div className="featured">
           {featured.map((tape) => (
-            <div key={tape.title} className="featured-card">
-              <img src={tape.cover} alt={tape.title} />
+            <a key={tape.slug} href={`/tape/${tape.slug}`} className="featured-card">
+              <div className="cover-placeholder" />
               <div className="overlay">
                 <h3>{tape.title}</h3>
-                <p>{tape.artist} • {tape.listens}</p>
+                <p>{tape.artist} • {tape.plays}</p>
               </div>
-            </div>
+            </a>
           ))}
         </div>
 
@@ -40,11 +31,11 @@ export default function Home() {
         <MixtapeGrid tapes={hottest} />
 
         <div className="note">
-          <strong>TAPE</strong> — The spot for mixtapes. Discover, stream, and download the latest from the streets and the studio.
+          <strong>TAPE</strong> — The 2026 spot for mixtapes. Stream, upload, and discover. SoundCloud energy, DatPiff roots.
         </div>
       </main>
       <footer>
-        TAPE • mixtapes • mobile-first
+        TAPE • mixtapes • 2026
       </footer>
     </>
   );

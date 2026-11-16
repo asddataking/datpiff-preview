@@ -13,7 +13,7 @@ export default function Header() {
           <a href="#">tapes</a>
           <a href="#">hottest</a>
           <a href="#">new</a>
-          <a href="#">artists</a>
+          <a href="/upload">upload</a>
         </nav>
       </div>
     </header>
