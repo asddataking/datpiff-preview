@@ -2,18 +2,16 @@ import Header from '../components/Header';
 import MixtapeGrid from '../components/MixtapeGrid';
 
 const featured = [
-  { title: 'So Far Gone', artist: 'Drake', listens: '4.2M', cover: '/covers/so-far-gone.jpg' },
-  { title: 'Dreamchasers', artist: 'Meek Mill', listens: '3.8M', cover: '/covers/dreamchasers.jpg' },
-  { title: 'Acid Rap', artist: 'Chance the Rapper', listens: '2.1M', cover: '/covers/acid-rap.jpg' },
+  { title: 'Night Shift', artist: 'Young Maverick', listens: '128K', cover: '/covers/night-shift.jpg' },
+  { title: 'Gold Rush', artist: 'King', listens: '94K', cover: '/covers/gold-rush.jpg' },
+  { title: 'Spotlight', artist: 'She', listens: '76K', cover: '/covers/spotlight.jpg' },
 ];
 
 const hottest = [
-  { title: 'Dedication 5', artist: 'Lil Wayne', rating: 5, listens: '1.9M', cover: '/covers/dedication.jpg', badge: 'platinum' },
-  { title: 'Gangsta Grillz', artist: 'DJ Drama', rating: 4, listens: '892K', cover: '/covers/gangsta-grillz.jpg', badge: 'gold' },
-  { title: 'Kush & Orange Juice', artist: 'Wiz Khalifa', rating: 5, listens: '2.4M', cover: '/covers/kush-oj.jpg' },
-  { title: 'Beam Me Up Scotty', artist: 'Nicki Minaj', rating: 4, listens: '1.1M', cover: '/covers/beam-me-up.jpg', badge: 'exclusive' },
-  { title: 'Rich Forever', artist: 'Rick Ross', rating: 5, listens: '756K', cover: '/covers/rich-forever.jpg' },
-  { title: 'Dreamchasers 2', artist: 'Meek Mill', rating: 5, listens: '4.1M', cover: '/covers/dreamchasers.jpg' },
+  { title: 'Block Party', artist: 'Real From The Block', rating: 5, listens: '52K', cover: '/covers/block-party.jpg', badge: 'hot' },
+  { title: 'Night Shift', artist: 'Young Maverick', rating: 4, listens: '128K', cover: '/covers/night-shift.jpg' },
+  { title: 'Gold Rush', artist: 'King', rating: 5, listens: '94K', cover: '/covers/gold-rush.jpg', badge: 'new' },
+  { title: 'Spotlight', artist: 'She', rating: 4, listens: '76K', cover: '/covers/spotlight.jpg' },
 ];
 
 export default function Home() {
@@ -22,7 +20,7 @@ export default function Home() {
       <Header />
       <main className="main container">
         <h2 className="section-title">
-          Featured Mixtapes <span>the ones we co-sign</span>
+          Featured <span>tapes we believe in</span>
         </h2>
         <div className="featured">
           {featured.map((tape) => (
@@ -37,16 +35,16 @@ export default function Home() {
         </div>
 
         <h2 className="section-title">
-          Hottest Right Now <span>updated every few minutes</span>
+          Hottest Right Now <span>what’s moving</span>
         </h2>
         <MixtapeGrid tapes={hottest} />
 
         <div className="note">
-          <strong>The Authority in Mixtapes</strong> — Stream or download free hip-hop mixtapes. Classic DatPiff energy, rebuilt mobile-first in Next.js.
+          <strong>TAPE</strong> — The spot for mixtapes. Discover, stream, and download the latest from the streets and the studio.
         </div>
       </main>
       <footer>
-        datPiff preview • Next.js • mobile-friendly
+        TAPE • mixtapes • mobile-first
       </footer>
     </>
   );
